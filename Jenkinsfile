@@ -17,5 +17,12 @@ pipeline{
                sh 'mvn package'
             }
         }
+        stage('check jar file location'){
+            steps{
+                sh 'echo ================================================='
+               sh 'ls -r -l *'
+               sh 'echo ================================================='
+            }
+        }
     }
 }
